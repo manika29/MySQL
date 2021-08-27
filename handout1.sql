@@ -1,4 +1,5 @@
-create table handout1.persons(
+create database handout1;
+create table persons(
 id int primary key not null, 
 age int not null,
 lastname varchar(50) not null,
