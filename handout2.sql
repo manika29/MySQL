@@ -1,3 +1,4 @@
+create database handout2;
 create table persons(
 id int primary key not null, 
 age int not null,
