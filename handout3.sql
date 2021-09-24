@@ -52,4 +52,6 @@ select * from Employee;
 
 alter table Employee add foreign key(Deptt_id) references department(Dept_id);
 
+select * from department;
+select * from Employee;
 desc orders;
