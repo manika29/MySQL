@@ -1,0 +1,56 @@
+create database DQL;
+
+CREATE TABLE STUDENTS (  
+RollNo INT NOT NULL,  
+NAME VARCHAR (20) NOT NULL,  
+ADDRESS CHAR (25),  
+AGE INT NOT NULL,  
+PRIMARY KEY (RollNo)  
+);  
+
+INSERT INTO STUDENTS (ROLLNo, NAME, ADDRESS, AGE)  
+VALUES (1, 'ABHIRAM', 'ALLAHABAD',22);  
+INSERT INTO STUDENTS (ROLLNo, NAME, ADDRESS, AGE)  
+VALUES (2, 'ALKA', 'GHAZIABAD',20);  
+INSERT INTO STUDENTS (ROLLNo, NAME, ADDRESS, AGE)  
+VALUES (3, 'DISHA', 'VARANASI',21);  
+INSERT INTO STUDENTS (ROLLNo, NAME, ADDRESS, AGE)  
+VALUES (4, 'ESHA', 'DELHI',21);  
+INSERT INTO STUDENTS (ROLLNo, NAME, ADDRESS, AGE)  
+VALUES (5, 'MANMEET', 'DELHI' ,23);  
+
+-- 1
+Select * from STUDENTS;
+
+-- 2
+Select NAME,AGE from STUDENTS ORDER BY AGE DESC;
+
+-- 3
+select distinct AGE from STUDENTS;
+
+-- 4
+Select * from STUDENTS WHERE NAME LIKE 'A%';
+
+-- 5
+Select * from STUDENTS where age BETWEEN 20 AND 23;
+
+-- 6
+select * from STUDENTS WHERE AGE IN (18,20,23);
+
+-- 7
+Select count(age) from STUDENTS;
+
+-- 8
+select sum(age) from STUDENTS;
+
+-- 9
+select avg(age) from STUDENTS;
+
+-- 10
+select min(age) from STUDENTS;
+
+-- 11
+select max(age) from STUDENTS;
+
+-- 12
+Select ADDRESS , avg(age) from STUDENTS GROUP BY ADDRESS
